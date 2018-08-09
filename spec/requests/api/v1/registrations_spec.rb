@@ -20,8 +20,8 @@ RSpec.describe 'User Registration', type: :request do
             password_confirmation: 'wrong_password'
           }, headers: headers
     
-        expect(response_json['errors']['password_confirmation']).to eq ["doesn't match Password"]
-        expect(response.status).to eq 422
+            expect(response_json['errors']['password_confirmation']).to eq ["doesn't match Password"]
+            expect(response.status).to eq 422
         end
 
         it 'an invalid email address' do
